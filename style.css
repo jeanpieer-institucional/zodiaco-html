@@ -1,0 +1,281 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --light: #ecf0f1;
+    --dark: #1a252f;
+    --gold: #f1c40f;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 37, 47, 0.7);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(241, 196, 15, 0.3);
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--light);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.zodiac-wheel {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    background: url('https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028036_1280.png') no-repeat center;
+    background-size: contain;
+    transition: var(--transition);
+}
+
+.sign-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.sign {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: radial-gradient(circle, rgba(44,62,80,0.9) 0%, rgba(26,37,47,0.9) 100%);
+    border: 2px solid var(--gold);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.sign img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
+}
+
+.sign-name {
+    margin-top: 10px;
+    color: var(--gold);
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+
+.sign:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+    border-color: var(--accent);
+}
+
+.sign:hover img {
+    transform: scale(1.1);
+}
+
+.sign:hover + .sign-name,
+.sign-container:hover .sign-name {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    border: 1px solid var(--gold);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+.modal-text {
+    flex: 1;
+    padding: 2rem;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light);
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--secondary);
+}
+
+.sign-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.sign-dates {
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.sign-element, .sign-planet {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background-color: rgba(52, 152, 219, 0.2);
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.sign-planet {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: var(--secondary);
+}
+
+.sign-description {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.sign-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trait {
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(241, 196, 15, 0.1);
+    color: var(--gold);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+@media (max-width: 900px) {
+    .zodiac-wheel {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+    }
+    
+    .sign-container {
+        width: 80px;
+    }
+    
+    .sign {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .sign-name {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+    
+    .modal-content {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .modal-image {
+        min-height: 200px;
+    }
+
+    
+}

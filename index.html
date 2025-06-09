@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodíaco Interactivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>El Zodíaco</h1>
+            <p class="subtitle">Explora los misterios de los signos astrológicos</p>
+        </header>
+        
+        <div class="zodiac-wheel">
+            <div class="sign-container">
+                <div class="sign" data-sign="aries"><img src="img/signos/aries-pl.jpg" alt="Aries"></div>
+                <div class="sign-name">Aries</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="taurus"><img src="img/signos/tauro.jpg" alt="Tauro"></div>
+                <div class="sign-name">Tauro</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="gemini"><img src="img/signos/gemeni.jpg" alt="Géminis"></div>
+                <div class="sign-name">Géminis</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="cancer"><img src="img/signos/cancer.jpg" alt="Cáncer"></div>
+                <div class="sign-name">Cáncer</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="leo"><img src="img/signos/leo2.jpg" alt="Leo"></div>
+                <div class="sign-name">Leo</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="virgo"><img src="img/signos/virgo.jpg" alt="Virgo"></div>
+                <div class="sign-name">Virgo</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="libra"><img src="img/signos/libra.jpg" alt="Libra"></div>
+                <div class="sign-name">Libra</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="scorpio"><img src="img/signos/escorpio-pl.jpg" alt="Escorpio"></div>
+                <div class="sign-name">Escorpio</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="sagittarius"><img src="img/signos/sagitario.jpg" alt="Sagitario"></div>
+                <div class="sign-name">Sagitario</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="capricorn"><img src="img/signos/capricornio.jpg" alt="Capricornio"></div>
+                <div class="sign-name">Capricornio</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="aquarius"><img src="img/signos/acuario.jpg" alt="Acuario"></div>
+                <div class="sign-name">Acuario</div>
+            </div>
+            <div class="sign-container">
+                <div class="sign" data-sign="pisces"><img src="img/signos/piscis.jpg" alt="Piscis"></div>
+                <div class="sign-name">Piscis</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-image" id="modal-image"></div>
+            <div class="modal-text">
+                <span class="close-btn" id="close-btn">×</span>
+                <h2 class="sign-title" id="sign-title">Aries</h2>
+                <div class="sign-dates" id="sign-dates">Mar 21 - Abr 19</div>
+                <div>
+                    <span class="sign-element" id="sign-element">Fuego</span>
+                    <span class="sign-planet" id="sign-planet">Marte</span>
+                </div>
+                <p class="sign-description" id="sign-description">
+                    Los Aries son conocidos por su energía, valentía y determinación. Son líderes naturales que disfrutan de los desafíos.
+                </p>
+                <h3>Rasgos principales:</h3>
+                <div class="sign-traits" id="sign-traits">
+                    <span class="trait">Enérgico</span>
+                    <span class="trait">Valiente</span>
+                    <span class="trait">Impulsivo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
