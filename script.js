@@ -8,7 +8,7 @@ const zodiacData = {
         planet: "Marte",
         description: "Los Aries son conocidos por su energía, valentía y determinación. Son líderes naturales que disfrutan de los desafíos y nuevas aventuras. Su espíritu competitivo y su entusiasmo los llevan a ser pioneros en muchas áreas.",
         traits: ["Enérgico", "Valiente", "Impulsivo", "Apasionado", "Honesto", "Adventurero"],
-        image: "https://cdn.pixabay.com/photo/2018/01/28/11/24/nature-3113318_1280.jpg"
+        image: "img/gif/aries.gif"
     },
     taurus: {
         title: "Tauro",
@@ -18,7 +18,7 @@ const zodiacData = {
         planet: "Venus",
         description: "Los Tauro son personas prácticas, decididas y sensibles. Valoran la seguridad y la estabilidad, y tienen un fuerte sentido de la lealtad. Son conocidos por su paciencia y su amor por los placeres sensuales de la vida.",
         traits: ["Práctico", "Leal", "Sensible", "Persistente", "Amante del confort", "Determinado"],
-        image: "https://cdn.pixabay.com/photo/2017/06/02/14/20/landscape-2366487_1280.jpg"
+        image: "img/gif/tauro.gif"
     },
     gemini: {
         title: "Géminis",
@@ -38,7 +38,7 @@ const zodiacData = {
         planet: "Luna",
         description: "Los Cáncer son emocionales, intuitivos y protectores. Valoran profundamente su hogar y familia, y tienen una gran capacidad para cuidar de los demás. Su naturaleza sensible los hace empáticos, pero también vulnerables.",
         traits: ["Emocional", "Intuitivo", "Protector", "Empático", "Nostálgico", "Cariñoso"],
-        image: "https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg"
+        image: "img/gif/cancer.gif"
     },
     leo: {
         title: "Leo",
